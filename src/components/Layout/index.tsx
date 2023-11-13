@@ -1,12 +1,20 @@
 import Header from "@/components/Header";
+import { Question, QuizAction } from "@/types";
 import { PropsWithChildren } from "react";
+import Footer from "@/components/Footer";
 
-function Layout({ children }: PropsWithChildren) {
+type LayoutProps = {
+  questionIndex: number;
+  dispatch: React.Dispatch<QuizAction>;
+  questions: Question[] | undefined;
+};
+
+function Layout({ children, dispatch }: PropsWithChildren<LayoutProps>) {
   return (
-    <div className="container">
+    <div>
       <Header />
       <main>{children}</main>
-      {/* <Footer /> */}
+      <Footer dispatch={dispatch} />
     </div>
   );
 }
