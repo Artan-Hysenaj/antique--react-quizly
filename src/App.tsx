@@ -39,11 +39,7 @@ function reducer(state: QuizState, action: QuizAction) {
       });
 
     case "RESET_QUIZ":
-      return stateUpdater({
-        ...initialState,
-        questions: state.questions,
-        status: "loading",
-      });
+      return initialState;
 
     case "FINISH_QUIZ":
       return stateUpdater({
