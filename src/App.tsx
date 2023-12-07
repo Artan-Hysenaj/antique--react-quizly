@@ -121,7 +121,6 @@ function App() {
             className="mt-6 bg-blue-500 text-white font-bold py-2 px-4 rounded-md"
             onClick={() => {
               dispatch({ type: "RESET_QUIZ" });
-              getQuestions();
             }}
           >
             Restart
