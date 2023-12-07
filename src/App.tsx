@@ -39,6 +39,7 @@ function reducer(state: QuizState, action: QuizAction) {
       });
 
     case "RESET_QUIZ":
+      state.answers.clear();
       return initialState;
 
     case "FINISH_QUIZ":
